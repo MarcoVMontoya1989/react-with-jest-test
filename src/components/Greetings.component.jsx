@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import OutputComponent from "./Output.component";
 
 const GreetingsComponent = () => {
 
@@ -12,8 +13,8 @@ const GreetingsComponent = () => {
     <div>
       <h2>Hello World!</h2>
 
-      {!change && <p>good to see you</p>}
-      {change && <p>Changed magically</p>}
+      {!change && <OutputComponent>good to see you</OutputComponent>}
+      {change && <OutputComponent>Changed magically</OutputComponent>}
       <button onClick={changeTheState}>Change it</button>
     </div>
   );
